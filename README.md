@@ -2,18 +2,25 @@
 
 This is a Streamlit-based web application that allows users to upload business card images, extract information using EasyOCR, and manage the extracted data in a MySQL database.
 
-## Features
+### Features
 
-- **Upload Tab:**
-  - Users can upload a business card image (in jpg or png format).
-  - The application extracts information such as name, designation, company name, phone number, email, etc., using the EasyOCR library.
-  - Extracted information is displayed in a DataFrame.
-  - Users can save the extracted data to a MySQL database.
+    - **Business Card Extraction:**
+        - Upload business card images (in jpg or png format).
+        - Utilize EasyOCR for accurate text extraction.
+        - Extracted information includes name, designation, company name, phone number, email, etc.
 
-- **Modify Tab:**
-  - Users can search for business card data based on email.
-  - Retrieved data is displayed with options to edit and delete.
-  - Data updates are reflected in the MySQL database.
+    - **Database Management:**
+        - Save extracted data to a MySQL database.
+        - Search, edit, and delete business card details from the database.
+
+ ### How to Use
+
+    1. **Upload Tab:**
+        - Navigate to the "Upload" tab.
+        - Upload a business card image.
+        - View the extracted information in a DataFrame.
+        - Save the data to the MySQL database using the "Save Database" button.
+
 
 ## Prerequisites
 
