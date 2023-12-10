@@ -12,8 +12,8 @@ from mysql.connector import IntegrityError
 isSave=False
 con = mysql.connector.connect(
     host="localhost",
-    user="root",  # Replace with your actual username
-    password="Rahane@27",  # Replace with your actual password
+    user="username",  # Replace with your actual username
+    password="password",  # Replace with your actual password
 )
 
 # Create a cursor object
@@ -66,6 +66,24 @@ col1, col2, col3 = st.tabs(["Home","Upload","Modify"])
 with col1:
 
     st.title("Home")
+    
+    
+    st.write("""
+    ## Business Card Extractor and Database Manager
+
+    Welcome to the Business Card Extractor and Database Manager! This Streamlit-based web application is designed to streamline the process of extracting information from business cards and managing the data efficiently.
+
+    ### Features
+
+    - **Business Card Extraction:**
+        - Upload business card images (in jpg or png format).
+        - Utilize EasyOCR for accurate text extraction.
+        - Extracted information includes name, designation, company name, phone number, email, etc.
+
+    - **Database Management:**
+        - Save extracted data to a MySQL database.
+        - Search, edit, and delete business card details from the database.
+""")
       
 with col2:
 
@@ -73,8 +91,8 @@ with col2:
 
     con = mysql.connector.connect(
         host="localhost",
-        user="root",  # Replace with your actual username
-        password="Rahane@27",  # Replace with your actual password
+        user="username",  # Replace with your actual username
+        password="password",  # Replace with your actual password
         database="businesscard_db"
     )
     # Upload an image file
@@ -197,8 +215,8 @@ with col3:
     # Connect to the MySQL server
     con = mysql.connector.connect(
         host="localhost",
-        user="root",  # Replace with your actual username
-        password="Rahane@27",  # Replace with your actual password
+        user="username",  # Replace with your actual username
+        password="password",  # Replace with your actual password
         database="businesscard_db",
     )
 
@@ -233,7 +251,7 @@ with col3:
                 if key != "Email":
                     data[key] = st.text_input(f"{key}:", value, key=key)
 
-            email_input = st.text_input("Email:", value, key="Email", disabled=True)
+            email_input = st.text_input("Email:", email, key="Email", disabled=True)
 
             if st.form_submit_button("Edit"):
                 # Update data form
